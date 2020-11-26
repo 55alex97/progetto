@@ -1,0 +1,155 @@
+/*queste caratteristiche le ho copiace da google fonts*/
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+/*header*/
+.logo img {
+	max-width: 100px;
+}
+nav a {
+	color: rgb(0, 0, 0);
+	text-transform: uppercase;
+	text-decoration: none;
+}
+body {
+	margin: 0;
+}
+/*main (immagine introduttiva)*/
+.slide {
+	background-image: url("../img/plants.jpg");
+	position: relative;
+	height: 50vh;
+	background-size: cover;
+}
+/*caratteristiche aggiuntive sulla immagine introduttiva*/
+.slide:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(250, 250, 250, 0.3); /*rgba serve per creare un colore opaco*/
+}
+/*qui abbiamo lavorato sulla frase che c'è nella foto introduttiva*/
+.cta {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	text-align: center;
+	font-size: 15px;
+}
+/* qui abbiamo lavorato sul pulsante scopri*/
+.cta a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	background-color: rgb(34, 181, 97);
+	padding: 10px 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	/* se vuoi il bordo fai così border: 1px solid rgb(34, 181, 97); */
+}
+.cta a:hover {
+	background-color: pink;
+}
+
+.intro_text {
+	text-align: center;
+	margin: 30px;
+	color: rgb(34, 181, 97);
+	border-bottom: 2px solid rgb(34, 181, 97);
+}
+
+.container_box {
+    display: flex;
+}
+
+.box {
+		flex: 1;
+			text-align: center;
+			margin: 20px;
+			padding: 30px 20px;
+}
+
+.box img {
+		width: 100%;
+}
+
+.box a {
+		text-decoration: none;
+	text-transform: uppercase;
+	color: white;
+	background-color: rgb(34, 181, 97);
+	padding: 10px 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+	display: inline-block; /*solo così l'elemento in line, ovvero i link, può creare il margine*/
+}
+.box a:hover {
+	background-color: pink;
+}
+
+.bg_green {
+	background-color: rgb(34, 181, 97);
+	display: flex;
+	padding: 30px 0;
+}
+
+/* indichiamo il div padre dei selettori */
+.bg_green > div {
+	flex: 1;
+	padding: 10px;
+}
+
+.contacts label {
+    color: white;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.contacts input,
+.contacts textarea {
+	/* ho attribuito la stessa regola a due elementi diversi*/
+	width: 100%; 
+	border-radius: 20px;
+	border: 1px solid rgb(34, 181, 97);
+	padding: 5px 10px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+footer {
+	display: flex;
+}
+
+.col_footer {
+	flex: 1;
+}
+.col_footer:nth-child(2) {
+    text-align: center;
+}
+.col_footer:nth-child(3) {
+    text-align: right;
+}
+
+/*questa è la regola da usare per la visualizzazione a smartphone e si possono adattare nell'eventualità, ovviamente si aggiunge alla fine*/
+@media only screen and (max-width: 678px) {
+    .container_box,
+    .bg_red,
+    footer {
+        flex-direction: column;
+    }
+    .box {
+        border-bottom: 1px solid #000
+    }
+    .col_footer:nth-child(2),
+    .col_footer:nth-child(3) {
+        text-align: left;
+    }
+}
+
